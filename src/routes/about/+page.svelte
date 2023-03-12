@@ -7,11 +7,15 @@
 		>Note icons created by Freepik - Flaticon</a
 	>
 
-	<a href="https://www.flaticon.com/ru/free-icons/" title="plus icons"
+	<a href="https://www.flaticon.com/free-icons/plus" title="plus icons"
 		><br />Plus icons created by IYAHICON - Flaticon</a
 	>
 
 	<a href="https://www.flaticon.com/free-icons/user" title="user icons"
-		>U<br />user icons created by Freepik - Flaticon</a
+		><br />user icons created by Freepik - Flaticon</a
+	>
+
+	<a href="https://www.flaticon.com/free-icons/garbage" title="garbage icons"
+		><br />Garbage icons created by Gregor Cresnar - Flaticon</a
 	>
 </div>
