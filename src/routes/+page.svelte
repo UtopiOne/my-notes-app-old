@@ -19,7 +19,7 @@
 	}
 </script>
 
-<div class="m-10 grid grid-cols-8 gap-10">
+<div class="m-10 grid row lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
 	{#each notes as note, i}
 		<Note />
 	{/each}
