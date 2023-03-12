@@ -9,7 +9,7 @@
 >
 	<div class="inline-flex m-1.5 ml-4">
 		<img src={logo} class="w-12 h-12 mr-1" alt="notes logo" />
-		<a class="m-3" href="/">Notes app</a>
+		<a class="m-3" href="/">MyNoteApp</a>
 	</div>
 
 	<a class="mt-5" href="about">About</a>
