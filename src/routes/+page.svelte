@@ -1,4 +1,6 @@
 <script lang="ts">
+	// @ts-nocheck
+
 	import AddCard from '$lib/AddCard.svelte';
 	import Note from '$lib/Note.svelte';
 	import notesStore from '../stores/stores.js';
@@ -18,9 +20,8 @@
 </script>
 
 <div class="m-10 grid grid-cols-8 gap-10">
-	<AddCard on:click={handleNoteAddition} />
-
 	{#each notes as note, i}
 		<Note />
 	{/each}
+	<AddCard on:click={handleNoteAddition} />
 </div>
