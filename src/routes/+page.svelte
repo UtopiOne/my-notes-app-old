@@ -4,6 +4,8 @@
 	import AddCard from '$lib/AddCard.svelte';
 	import Note from '$lib/Note.svelte';
 	import notesStore from '../stores/stores.js';
+	import Modal from '$lib/Modal.svelte';
+	import EditNoteModal from '$lib/EditNoteModal.svelte';
 
 	let notes: any[];
 
