@@ -4,7 +4,7 @@
 </script>
 
 <header
-	class="w-screen flex justify-between shadow-lg px-2 md:px-0 text-lg bg-white sticky top-0 backdrop-blur-sm transition-transform ease-in z-20"
+	class="w-full flex justify-between shadow-lg px-2 md:px-0 text-lg bg-white sticky top-0 backdrop-blur-sm transition-transform ease-in z-20"
 	class:translate-y-full={false}
 >
 	<div class="inline-flex m-1.5 ml-4">
