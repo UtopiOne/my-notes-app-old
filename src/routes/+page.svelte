@@ -3,8 +3,9 @@
 
 	import AddCard from '$lib/AddCard.svelte';
 	import Note from '$lib/Note.svelte';
-	import notesStore from '../stores/stores.js';
 	import EditNoteModal from '$lib/EditNoteModal.svelte';
+	import LoginModal from '$lib/LoginModal.svelte';
+	import notesStore from '../stores/stores.js';
 
 	let notes: any[];
 	let showModal = false;

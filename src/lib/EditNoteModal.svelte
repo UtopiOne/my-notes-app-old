@@ -18,13 +18,13 @@
 			bind:value={titleInput}
 		/>
 	</div>
-	<div slot="footer" class="flex justify-end gap-2">
-		<button class="bg-slate-300 py-1 px-2 rounded w-35 h-10" on:click={() => dispatch('closeModal')}
-			>Close</button
-		>
+	<div slot="footer" class="flex justify-start gap-2">
 		<button
 			class="bg-green-300 py-1 px-2 rounded w-35 h-10"
 			on:click={() => dispatch('acceptModal')}>Accept</button
+		>
+		<button class="bg-slate-300 py-1 px-2 rounded w-35 h-10" on:click={() => dispatch('closeModal')}
+			>Close</button
 		>
 	</div>
 </Modal>

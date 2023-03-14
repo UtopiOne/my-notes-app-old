@@ -7,6 +7,12 @@
 	src: local('Montserrat Regular');
 }
 
+@layer components {
+	.input {
+		@apply border-slate-300 border-2 rounded mb-3 p-1;
+	}
+}
+
 * {
 	font-family: 'Montserrat';
 }

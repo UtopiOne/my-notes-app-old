@@ -1,6 +1,16 @@
-<script>
+<script lang="ts">
 	import logo from '$lib/assets/logo.png';
 	import user from '$lib/assets/user.png';
+
+	import LoginModal from '$lib/LoginModal.svelte';
+	import UserModal from '$lib/UserModal.svelte';
+
+	let showLogin: boolean = false;
+	let loggedIn = false;
+
+	const getLogin = () => {
+		showLogin = !showLogin;
+	};
 </script>
 
 <header
@@ -14,9 +24,17 @@
 
 	<a class="mt-5" href="about">About</a>
 
-	<div class="m-1.5 mr-4">
+	<a href="/" class="m-1.5 mr-4" on:click={getLogin}>
 		<img src={user} class="w-12 h-12" alt="your profile pic" />
-	</div>
+	</a>
 </header>
+
+{#if showLogin}
+	{#if !loggedIn}
+		<LoginModal on:closeLogin={getLogin} on:login={getLogin} />
+	{:else}
+		<UserModal />
+	{/if}
+{/if}
 
 <slot />
