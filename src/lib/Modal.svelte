@@ -10,7 +10,6 @@
 		<div>
 			<slot name="title" />
 		</div>
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<slot name="body" class="row-start-2" />
 
 		<slot name="footer" class="row-start-3" />
