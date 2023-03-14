@@ -2,8 +2,8 @@
 	import logo from '$lib/assets/logo.png';
 	import user from '$lib/assets/user.png';
 
-	import LoginModal from '$lib/LoginModal.svelte';
-	import UserModal from '$lib/UserModal.svelte';
+	import LoginModal from '$lib/modals/LoginModal.svelte';
+	import UserModal from '$lib/modals/UserModal.svelte';
 
 	let showLogin: boolean = false;
 	let loggedIn = false;
