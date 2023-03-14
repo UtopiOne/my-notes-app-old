@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import Modal from '$lib/Modal.svelte';
 
+	export let titleInput = '';
 	const dispatch = createEventDispatcher();
 </script>
 
@@ -10,7 +11,12 @@
 		<p>Note edit</p>
 	</div>
 	<div slot="body" class="row-start-2">
-		<input type="text" placeholder="Title" class="border-slate-300 border-2 rounded mb-3 p-1" />
+		<input
+			type="text"
+			placeholder="Title"
+			class="border-slate-300 border-2 rounded mb-3 p-1"
+			bind:value={titleInput}
+		/>
 	</div>
 	<div slot="footer" class="flex justify-end gap-2">
 		<button class="bg-slate-300 py-1 px-2 rounded w-35 h-10" on:click={() => dispatch('closeModal')}

@@ -5,7 +5,7 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<div class="absolute top-0 h-full w-full flex bg-slate-500/50 z-30 items-center justify-center">
+<div class="fixed top-0 h-full w-full flex bg-slate-500/50 z-30 items-center justify-center">
 	<div class="grid grid-rows-3 bg-white p-6 rounded-lg shadow-lg" in:scale={{ duration: 100 }}>
 		<div>
 			<slot name="title" />
