@@ -11,6 +11,7 @@
 	let showModal = false;
 
 	let currentTitle = '';
+	let currentContents = '';
 
 	const getModal = async function () {
 		showModal = !showModal;
@@ -22,10 +23,10 @@
 
 	const handleNoteAddition = async function () {
 		await getModal();
-		console.log(1);
 		notesStore.update((currentData) => {
-			return [1, ...currentData];
+			return [...currentData, { title: currentTitle, contents: currentContents, date: '' }];
 		});
+		console.log(notes);
 	};
 </script>
 
@@ -34,12 +35,13 @@
 		on:acceptModal={handleNoteAddition}
 		on:closeModal={getModal}
 		bind:titleInput={currentTitle}
+		bind:contentInput={currentContents}
 	/>
 {/if}
 
 <div class="m-10 grid row lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
 	{#each notes as note, i}
-		<Note title={currentTitle} />
+		<Note title={note.title} contents={note.contents} />
 	{/each}
 	<AddCard on:click={getModal} />
 </div>
