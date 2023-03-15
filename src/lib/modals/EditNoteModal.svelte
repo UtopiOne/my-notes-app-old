@@ -8,10 +8,10 @@
 </script>
 
 <Modal>
-	<div slot="title" class="flex justify-center">
+	<div slot="title" class="text-center">
 		<p>Note edit</p>
 	</div>
-	<div slot="body" class="row-start-2 grid grid-rows-4">
+	<div slot="body" class="row-start-2 grid grid-rows-4 w-80 h-44">
 		<input
 			type="text"
 			placeholder="Title"
