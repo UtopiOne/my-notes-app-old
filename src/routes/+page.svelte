@@ -1,10 +1,10 @@
 <script lang="ts">
 	// @ts-nocheck
 
-	import AddCard from '$lib/AddCard.svelte';
-	import Note from '$lib/Note.svelte';
-	import EditNoteModal from '$lib/modals/EditNoteModal.svelte';
-	import LoginModal from '$lib/modals/LoginModal.svelte';
+	import AddCard from '$lib/components/AddCard.svelte';
+	import Note from '$lib/components/Note.svelte';
+	import EditNoteModal from '$lib/components/modals/EditNoteModal.svelte';
+	import LoginModal from '$lib/components/modals/LoginModal.svelte';
 	import notesStore from '../stores/stores.js';
 
 	let notes: any[];

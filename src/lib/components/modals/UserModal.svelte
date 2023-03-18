@@ -1,5 +1,5 @@
 <script>
-	import Modal from '$lib/modals/Modal.svelte';
+	import Modal from '$lib/components/modals/Modal.svelte';
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
