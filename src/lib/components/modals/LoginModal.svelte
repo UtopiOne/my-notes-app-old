@@ -12,7 +12,7 @@
 	<div slot="title" class="flex justify-center text-xl">
 		<p>Login</p>
 	</div>
-	<form slot="body" class="flex flex-row sm:flex-col">
+	<form slot="body" class="flex flex-col">
 		<input class="input" type="email" placeholder="E-mail" />
 		<input class="input" type="password" placeholder="Password" bind:value={password} />
 		<input

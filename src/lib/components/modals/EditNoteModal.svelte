@@ -13,19 +13,19 @@
 	</div>
 	<div slot="body" class="row-start-2 grid grid-rows-4 w-80 h-44">
 		<input
+			maxlength="30"
 			type="text"
 			placeholder="Title"
 			class="border-slate-300 border-2 rounded mb-3 p-1"
 			bind:value={titleInput}
 		/>
-		<input
-			type="text"
+		<textarea
 			placeholder="Contents"
-			class="border-slate-300 border-2 rounded mb-3 p-1 row-span-3 text-top"
+			class="border-slate-300 border-2 rounded mb-3 p-1 h-64 row-span-3 text-top resize-none"
 			bind:value={contentInput}
 		/>
 	</div>
-	<div slot="footer" class="flex justify-start gap-2">
+	<div slot="footer" class="flex justify-start gap-2 translate-y-36">
 		<button
 			class="bg-green-300 py-1 px-2 rounded w-35 h-10"
 			on:click={() => dispatch('acceptModal')}>Accept</button

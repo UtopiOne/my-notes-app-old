@@ -1,15 +1,18 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-	import { scale } from 'svelte/transition';
+	import { scale, blur } from 'svelte/transition';
 
 	const dispatch = createEventDispatcher();
 </script>
 
-<div class="fixed top-0 h-full w-full flex bg-slate-500/50 z-30 items-center justify-center">
+<div
+	class="fixed top-0 h-full w-full flex bg-slate-500/50 z-30 items-center justify-center"
+	in:blur={{ duration: 100, amount: 10 }}
+>
 	<div
 		class="grid grid-rows-3 bg-white p-6 rounded-lg shadow-lg"
-		in:scale={{ duration: 100 }}
-		out:scale={{ duration: 100 }}
+		in:scale={{ duration: 450 }}
+		out:scale={{ duration: 250 }}
 	>
 		<div>
 			<slot name="title" />
