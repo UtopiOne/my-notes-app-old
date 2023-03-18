@@ -11,7 +11,7 @@
 	in:fly={{ y: 100, duration: 300 }}
 >
 	<button class="col-start-1 col-span-2 text-xl break-all hover:underline">{title}</button>
-	<p class="col-span-2 row-start-2 mx-5 break-all">{contents}</p>
+	<p class="col-span-2 row-start-2 mx-5">{contents.substring(0, 290)}...</p>
 	<img
 		src={garbage}
 		alt="delete"
