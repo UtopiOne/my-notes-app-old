@@ -8,7 +8,7 @@
 </script>
 
 <Modal>
-	<div slot="title" class="text-center">
+	<div slot="title" class="text-center text-xl">
 		<p>Note edit</p>
 	</div>
 	<div slot="body" class="row-start-2 grid grid-rows-4 w-80 h-44">

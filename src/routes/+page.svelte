@@ -11,6 +11,7 @@
 
 	export let data: PageData;
 	let notes = data.notes.data;
+	notesStore.set([]);
 
 	notes.forEach((note) => {
 		if (!$notesStore.includes(note))
@@ -24,33 +25,41 @@
 	let currentTitle = '';
 	let currentContents = '';
 
-	const getModal = async function () {
-		showModal = !showModal;
-	};
-
 	const handleNoteAddition = async function () {
-		await getModal();
+		showModal = !showModal;
 		notesStore.update((currentData) => {
-			return [...currentData, { title: currentTitle, content: currentContents }];
+			return [
+				...currentData,
+				{ id: $notesStore.length + 1, title: currentTitle, content: currentContents }
+			];
 		});
 
 		currentTitle = '';
 		currentContents = '';
+	};
+
+	const removeNote = function (id) {
+		notesStore.update((currentData) => {
+			let filtered = currentData.filter((item) => item.id != id);
+			return [...filtered];
+		});
 	};
 </script>
 
 {#if showModal}
 	<EditNoteModal
 		on:acceptModal={handleNoteAddition}
-		on:closeModal={getModal}
+		on:closeModal={() => (showModal = !showModal)}
 		bind:titleInput={currentTitle}
 		bind:contentInput={currentContents}
 	/>
 {/if}
 
 <div class="m-10 grid row lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
-	{#each $notesStore as note, i}
-		<Note title={note.title} contents={note.content} />
+	{#each $notesStore as note, i (note.id)}
+		<Note title={note.title} contents={note.content} on:delete={removeNote(note.id)} />
 	{/each}
-	<AddCard on:click={getModal} />
+	<AddCard on:click={() => (showModal = !showModal)} />
 </div>
+
+{@debug $notesStore}
