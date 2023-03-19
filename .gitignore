@@ -9,6 +9,4 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-/src/lib/pocketbase/pb_data
-/src/lib/pocketbase/pb_migrations
-/src/lib/pocketbase.exe
+/src/lib/database/supabaseClient.ts
