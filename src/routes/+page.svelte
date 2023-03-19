@@ -46,18 +46,20 @@
 	};
 </script>
 
-{#if showModal}
-	<EditNoteModal
-		on:acceptModal={handleNoteAddition}
-		on:closeModal={() => (showModal = !showModal)}
-		bind:titleInput={currentTitle}
-		bind:contentInput={currentContents}
-	/>
-{/if}
+<main class="absolute overflow-auto dark:bg-neutral-800 w-screen h-screen ">
+	{#if showModal}
+		<EditNoteModal
+			on:acceptModal={handleNoteAddition}
+			on:closeModal={() => (showModal = !showModal)}
+			bind:titleInput={currentTitle}
+			bind:contentInput={currentContents}
+		/>
+	{/if}
 
-<div class="m-10 grid row lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
-	{#each $notesStore as note, i (note.id)}
-		<Note title={note.title} contents={note.content} on:delete={removeNote(note.id)} />
-	{/each}
-	<AddCard on:click={() => (showModal = !showModal)} />
-</div>
+	<div class="m-10 grid row lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
+		{#each $notesStore as note, i (note.id)}
+			<Note title={note.title} contents={note.content} on:delete={removeNote(note.id)} />
+		{/each}
+		<AddCard on:click={() => (showModal = !showModal)} />
+	</div>
+</main>

@@ -1,8 +1,12 @@
 <script>
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
+
+	let darkMode = false;
 </script>
 
-<Header />
+<main class={darkMode ? 'dark' : ''}>
+	<Header on:toggleDarkMode={() => (darkMode = !darkMode)} />
 
-<slot />
+	<slot />
+</main>

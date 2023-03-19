@@ -12,16 +12,10 @@
 		<p>Note edit</p>
 	</div>
 	<div slot="body" class="row-start-2 grid grid-rows-4 w-80 h-44">
-		<input
-			maxlength="30"
-			type="text"
-			placeholder="Title"
-			class="border-slate-300 border-2 rounded mb-3 p-1"
-			bind:value={titleInput}
-		/>
+		<input maxlength="30" type="text" placeholder="Title" class="input" bind:value={titleInput} />
 		<textarea
 			placeholder="Contents"
-			class="border-slate-300 border-2 rounded mb-3 p-1 h-64 row-span-3 text-top resize-none"
+			class="border-slate-300 border-2 rounded mb-3 p-1 h-64 row-span-3 text-top resize-none dark:bg-neutral-600 dark:border-neutral-600"
 			bind:value={contentInput}
 		/>
 	</div>
