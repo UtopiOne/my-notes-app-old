@@ -5,7 +5,7 @@
 	import Note from '$lib/components/Note.svelte';
 	import EditNoteModal from '$lib/components/modals/EditNoteModal.svelte';
 	import LoginModal from '$lib/components/modals/LoginModal.svelte';
-	import notesStore from '../stores/stores.ts';
+	import notesStore from '$lib/stores/stores.ts';
 
 	import type { PageData } from './$types';
 
