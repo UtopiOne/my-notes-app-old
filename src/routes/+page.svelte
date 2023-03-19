@@ -61,5 +61,3 @@
 	{/each}
 	<AddCard on:click={() => (showModal = !showModal)} />
 </div>
-
-{@debug $notesStore}
