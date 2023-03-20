@@ -9,6 +9,7 @@
 
 	let showLogin: boolean = false;
 	let loggedIn = false;
+	let darkMode = false;
 
 	const dispatch = createEventDispatcher();
 
@@ -25,7 +26,13 @@
 		<img src={logo} class="w-12 h-12 mr-1 dark:fill-slate-100" alt="notes logo" />
 		<a class="m-3 dark:text-slate-100" href="/">MyNoteApp</a>
 	</div>
-	<button class="dark:text-slate-100" on:click={() => dispatch('toggleDarkMode')}>Dark mode</button>
+	<button
+		class="dark:text-slate-100"
+		on:click={() => {
+			darkMode = !darkMode;
+			dispatch('toggleDarkMode');
+		}}>Dark mode {darkMode ? 'on' : 'off'}</button
+	>
 
 	<a class="mt-5 dark:text-slate-100" href="about">About</a>
 

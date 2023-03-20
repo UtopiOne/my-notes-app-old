@@ -24,7 +24,7 @@
 	<button class="col-start-1 col-span-2 text-xl break-all hover:underline dark:text-neutral-50"
 		>{title}</button
 	>
-	<p class="col-span-2 row-start-2 mx-5 dark:text-neutral-50">{cutString(contents)}</p>
+	<p class="col-span-2 row-start-2 mx-5 dark:text-neutral-50 break-words">{cutString(contents)}</p>
 	<button
 		class="w-10 h-10 justify-self-center col-start-2 row-start-3 hover:opacity-50"
 		on:click={() => dispatch('delete')}><img src={garbage} alt="delete" /></button
