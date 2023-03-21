@@ -1,6 +1,6 @@
 {
-	"name": "my-note-app",
-	"version": "0.0.1",
+	"name": "my-notes-app",
+	"version": "0.6.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -32,7 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@supabase/supabase-js": "^2.11.0",
-		"pocketbase": "^0.12.1"
+		"@supabase/supabase-js": "^2.11.0"
 	}
 }
