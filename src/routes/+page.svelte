@@ -2,9 +2,8 @@
 	// @ts-nocheck
 
 	import AddCard from '$lib/components/AddCard.svelte';
-	import Note from '$lib/components/Note.svelte';
 	import EditNoteModal from '$lib/components/modals/EditNoteModal.svelte';
-	import LoginModal from '$lib/components/modals/LoginModal.svelte';
+	import Note from '$lib/components/Note.svelte';
 	import notesStore from '$lib/stores/stores.ts';
 
 	import type { PageData } from './$types';
@@ -46,7 +45,7 @@
 	};
 </script>
 
-<main class="absolute overflow-auto dark:bg-neutral-800 w-screen h-screen ">
+<div class="absolute overflow-auto dark:bg-neutral-800 w-screen h-screen ">
 	{#if showModal}
 		<EditNoteModal
 			on:acceptModal={handleNoteAddition}
@@ -62,4 +61,4 @@
 		{/each}
 		<AddCard on:click={() => (showModal = !showModal)} />
 	</div>
-</main>
+</div>

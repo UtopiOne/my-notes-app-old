@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 </script>
 
-<main class="fixed overflow-auto w-screen h-screen dark:bg-neutral-800">
+<div class="fixed overflow-auto w-screen h-screen dark:bg-neutral-800">
 	<div class="m-5" in:fly={{ y: 100, duration: 100 }} out:fly={{ y: 100, duration: 100 }}>
 		<a href="https://www.flaticon.com/free-icons/note" title="note icons"
 			>Note icons created by Freepik - Flaticon</a
@@ -20,4 +20,4 @@
 			><br />Garbage icons created by Gregor Cresnar - Flaticon</a
 		>
 	</div>
-</main>
+</div>

@@ -1,6 +1,6 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
 	import Modal from '$lib/components/modals/Modal.svelte';
+	import { createEventDispatcher } from 'svelte';
 
 	export let titleInput = '';
 	export let contentInput = '';
